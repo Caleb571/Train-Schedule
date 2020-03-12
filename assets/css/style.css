@@ -1,0 +1,18 @@
+body{
+    background: lightgray;
+    color: lightseagreen;
+}
+
+th{
+    font-weight: bold;
+}
+
+button{
+    background:  lightseagreen;;
+    color: white;
+}
+
+._jw-tpk-container {
+width: 270px !important;
+    height: 200px !important;
+}

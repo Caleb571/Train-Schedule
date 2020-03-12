@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.10.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.10.0/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+   <script src="http://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.js"></script>
+   <link href="http://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Weninger,Caleb</title>
+  </head>
+  <body>
+    <br />
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">
+          Current Time: <span class="currentTime"></span>
+        </h1>
+        <p class="lead">
+          I am Caleb Weninger and you are checking out my Train Schedule
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 class="currentTime"></h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Station</th>
+                <th scope="col">Train ID</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Arrival Time</th>
+                <th scope="col">Arrival Countdown (In Minutes)</th>
+                <th scope="col">Platform</th>
+              </tr>
+            </thead>
+            <tbody id="train-schedule-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form novalidate>
+            <div class="form-row">
+              <div class="form-group col-sm-6">
+                <label>Train Station</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="train-station"
+                  maxlength="15"
+                  placeholder="New Britain"
+                />
+              </div>
+              <div class="form-group col-sm-6">
+                <label>Train ID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="train-id"
+                  maxlength="6"
+                  placeholder="Express"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Destination</label>
+              <input
+                type="text"
+                class="form-control"
+                id="train-destination"
+                maxlength="15"
+                placeholder="City or Station Name"
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group col-sm-4">
+                <label>First Departure (24hr format)</label>
+                <input class="first-departure" type="text" id="time" placeholder="Time">
+          
+              </div>
+              <div class="form-group col-sm-4">
+                <label>Frequency (minutes)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="train-frequency"
+                  min="1"
+                  max="1449"
+                  placeholder="30"
+                />
+              </div>
+              <div class="form-group col-sm-4">
+                <label>Platform</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="train-platform"
+                  maxlength="2"
+                  placeholder="2a"
+                />
+              </div>
+            </div>
+            <button type="submit" id="addTrain">Add Train</button>
+            <button type="submit" id="testing">Testing</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+  </body>
+</html>
